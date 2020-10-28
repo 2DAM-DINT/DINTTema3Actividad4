@@ -5,9 +5,100 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Actividad4"
         mc:Ignorable="d"
-        Title="Visor de imágenes" Height="450" Width="800"
+        Title="Visor de imágenes" 
+        MinHeight="615" MinWidth="730"
+        Height="615" Width="730"
         Icon=".\recursos\image.ico">
-    <Grid>
-        
-    </Grid>
+    <DockPanel LastChildFill="True">
+        <StackPanel 
+            DockPanel.Dock="Bottom"
+            Orientation="Horizontal"
+            Margin="10" 
+            Background="LightBlue">
+            <TextBlock 
+                Text="Nº de imágenes: 10"
+                FontFamily="Rubik"
+                FontSize="20"
+                Margin="4,15"/>
+            <TextBlock 
+                Text="Diseñado por Javier Catalá"
+                FontFamily="Rubik"
+                FontSize="20"
+                Margin="4,15" />
+        </StackPanel>
+        <Border
+            DockPanel.Dock="Right"
+            BorderThickness="2"
+            BorderBrush="Black"
+            CornerRadius="3"
+            Background="LightGreen"
+            Margin="10,10,10,5">
+            <StackPanel>
+                <Button 
+                    Content="Añadir imagen"
+                    Margin="5"
+                    Width="100"/>
+                <Button 
+                    Content="Eliminar imagen"
+                    Margin="5"
+                    Width="100"/>
+                <Button 
+                    Content="Eliminar todas"
+                    Margin="5"
+                    Width="100"/>
+                <Button 
+                    Content="Rotar"
+                    Margin="5"
+                    Width="100"/>
+                <Button 
+                    Content="Recortar"
+                    Margin="5"
+                    Width="100"/>
+            </StackPanel>
+        </Border>
+        <StackPanel 
+            DockPanel.Dock="Top"
+            Margin="10">
+            <TextBlock 
+                Text="Visor de imágenes"
+                FontFamily="Rubik"
+                FontSize="40"
+                TextAlignment="Center"/>
+        </StackPanel>
+        <WrapPanel
+            Margin="2,0,0,5">
+            <Image
+                Source=".\recursos\episodioIV.jpg"
+                Height="218"
+                Width="145"/>
+            <Image
+                Source=".\recursos\episodioIV.jpg"
+                Height="218"
+                Width="145"/>
+            <Image
+                Source=".\recursos\episodioIV.jpg"
+                Height="218"
+                Width="145"/>
+            <Image
+                Source=".\recursos\episodioIV.jpg"
+                Height="218"
+                Width="145"/>
+            <Image
+                Source=".\recursos\episodioIV.jpg"
+                Height="218"
+                Width="145"/>
+            <Image
+                Source=".\recursos\episodioIV.jpg"
+                Height="218"
+                Width="145"/>
+            <Image
+                Source=".\recursos\episodioIV.jpg"
+                Height="218"
+                Width="145"/>
+            <Image
+                Source=".\recursos\episodioIV.jpg"
+                Height="218"
+                Width="145"/>
+        </WrapPanel>
+    </DockPanel>
 </Window>
