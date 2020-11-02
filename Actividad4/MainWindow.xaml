@@ -73,7 +73,21 @@
             Margin="2,0,0,5">
             <Image
                 Source=".\recursos\episodioIV.jpg"
-                Height="218"
+                Width="145"/>
+            <Image
+                Source=".\recursos\episodioIV.jpg"
+                Width="145"/>
+            <Image
+                Source=".\recursos\episodioIV.jpg"
+                Width="145"/>
+            <Image
+                Source=".\recursos\episodioIV.jpg"
+                Width="145"/>
+            <Image
+                Source=".\recursos\episodioIV.jpg"
+                Width="145"/>
+            <Image
+                Source=".\recursos\episodioIV.jpg"
                 Width="145"/>
             <Image
                 Source=".\recursos\episodioIV.jpg"
@@ -81,27 +95,6 @@
                 Width="145"/>
             <Image
                 Source=".\recursos\episodioIV.jpg"
-                Height="218"
-                Width="145"/>
-            <Image
-                Source=".\recursos\episodioIV.jpg"
-                Height="218"
-                Width="145"/>
-            <Image
-                Source=".\recursos\episodioIV.jpg"
-                Height="218"
-                Width="145"/>
-            <Image
-                Source=".\recursos\episodioIV.jpg"
-                Height="218"
-                Width="145"/>
-            <Image
-                Source=".\recursos\episodioIV.jpg"
-                Height="218"
-                Width="145"/>
-            <Image
-                Source=".\recursos\episodioIV.jpg"
-                Height="218"
                 Width="145"/>
         </WrapPanel>
     </DockPanel>
