@@ -6,9 +6,9 @@
         mc:Ignorable="d"
         Title="Visor de imágenes"
         MinHeight="615"
-        MinWidth="750"
+        MinWidth="755"
         Height="615"
-        Width="750"
+        Width="755"
         Icon=".\recursos\image.ico">
 
     <Window.Resources>
