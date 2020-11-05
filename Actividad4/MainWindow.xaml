@@ -6,9 +6,9 @@
         mc:Ignorable="d"
         Title="Visor de imágenes"
         MinHeight="615"
-        MinWidth="755"
+        MinWidth="750"
         Height="615"
-        Width="755"
+        Width="750"
         Icon=".\recursos\image.ico">
 
     <Window.Resources>
@@ -19,7 +19,7 @@
                     Value="5" />
         </Style>
 
-        <Style TargetType="{x:Type Border}">
+        <Style TargetType="{x:Type Border}" x:Key="borde">
             <Setter Property="BorderThickness"
                     Value="2" />
             <Setter Property="BorderBrush"
@@ -84,7 +84,8 @@
                        Text="Diseñado por Javier Catalá"
                        Style="{StaticResource textoPie}" />
         </DockPanel>
-        <Border DockPanel.Dock="Right">
+        <Border DockPanel.Dock="Right"
+                Style="{StaticResource borde}">
             <DockPanel LastChildFill="False">
                 <Button DockPanel.Dock="Top"
                         Content="Añadir imagen" />
