@@ -3,99 +3,113 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Actividad4"
         mc:Ignorable="d"
-        Title="Visor de imágenes" 
-        MinHeight="615" MinWidth="750"
-        Height="615" Width="750"
+        Title="Visor de imágenes"
+        MinHeight="615"
+        MinWidth="750"
+        Height="615"
+        Width="750"
         Icon=".\recursos\image.ico">
+
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Width"
+                    Value="100" />
+            <Setter Property="Margin"
+                    Value="5" />
+        </Style>
+
+        <Style TargetType="{x:Type Border}">
+            <Setter Property="BorderThickness"
+                    Value="2" />
+            <Setter Property="BorderBrush"
+                    Value="Black" />
+            <Setter Property="CornerRadius"
+                    Value="3" />
+            <Setter Property="Background"
+                    Value="LightGreen" />
+            <Setter Property="Margin"
+                    Value="10,10,10,5" />
+        </Style>
+
+        <Style TargetType="{x:Type Image}">
+            <Setter Property="Width"
+                    Value="145" />
+        </Style>
+
+        <Style TargetType="{x:Type TextBlock}">
+            <Setter Property="Margin"
+                    Value="5" />
+            <Setter Property="FontFamily"
+                    Value="Rubik" />
+        </Style>
+
+        <Style TargetType="{x:Type TextBlock}"
+               x:Key="textoEncabezado"
+               BasedOn="{StaticResource {x:Type TextBlock}}">
+            <Setter Property="Margin"
+                    Value="10" />
+            <Setter Property="FontSize"
+                    Value="40" />
+            <Setter Property="TextAlignment"
+                    Value="Center" />
+        </Style>
+
+        <Style TargetType="{x:Type TextBlock}"
+               x:Key="textoPie"
+               BasedOn="{StaticResource {x:Type TextBlock}}">
+            <Setter Property="Margin"
+                    Value="4,15" />
+            <Setter Property="FontSize"
+                    Value="20" />
+        </Style>
+
+        <Style TargetType="{x:Type DockPanel}" x:Key="pie">
+            <Setter Property="LastChildFill"
+                    Value="False" />
+            <Setter Property="Margin"
+                    Value="10" />
+            <Setter Property="Background"
+                    Value="LightBlue" />
+        </Style>
+    </Window.Resources>
+
     <DockPanel LastChildFill="True">
-        <DockPanel LastChildFill="False" 
-                   DockPanel.Dock="Bottom"
-                   Margin="10" 
-                   Background="LightBlue">
-            <TextBlock 
-                DockPanel.Dock="Left"
-                Text="Nº de imágenes: 10"
-                FontFamily="Rubik"
-                FontSize="20"
-                Margin="4,15"/>
-            <TextBlock 
-                DockPanel.Dock="Right"
-                Text="Diseñado por Javier Catalá"
-                FontFamily="Rubik"
-                FontSize="20"
-                Margin="4,15" />
+        <DockPanel DockPanel.Dock="Bottom"
+                   Style="{StaticResource pie}">
+            <TextBlock DockPanel.Dock="Left"
+                       Text="Nº de imágenes: 10"
+                       Style="{StaticResource textoPie}" />
+            <TextBlock DockPanel.Dock="Right"
+                       Text="Diseñado por Javier Catalá"
+                       Style="{StaticResource textoPie}" />
         </DockPanel>
-        <Border
-            DockPanel.Dock="Right"
-            BorderThickness="2"
-            BorderBrush="Black"
-            CornerRadius="3"
-            Background="LightGreen"
-            Margin="10,10,10,5">
+        <Border DockPanel.Dock="Right">
             <DockPanel LastChildFill="False">
-                <Button 
-                    DockPanel.Dock="Top"
-                    Content="Añadir imagen"
-                    Margin="5"
-                    Width="100"/>
-                <Button
-                    DockPanel.Dock="Top"
-                    Content="Eliminar imagen"
-                    Margin="5"
-                    Width="100"/>
-                <Button
-                    DockPanel.Dock="Top"
-                    Content="Eliminar todas"
-                    Margin="5"
-                    Width="100"/>
-                <Button
-                    DockPanel.Dock="Bottom"
-                    Content="Recortar"
-                    Margin="5"
-                    Width="100" />
-                <Button
-                    DockPanel.Dock="Bottom"
-                    Content="Rotar"
-                    Margin="5"
-                    Width="100" />
+                <Button DockPanel.Dock="Top"
+                        Content="Añadir imagen" />
+                <Button DockPanel.Dock="Top"
+                        Content="Eliminar imagen" />
+                <Button DockPanel.Dock="Top"
+                        Content="Eliminar todas" />
+                <Button DockPanel.Dock="Bottom"
+                        Content="Recortar" />
+                <Button DockPanel.Dock="Bottom"
+                        Content="Rotar" />
             </DockPanel>
         </Border>
-        <TextBlock
-            DockPanel.Dock="Top"
-            Margin="10"
-            Text="Visor de imágenes"
-            FontFamily="Rubik"
-            FontSize="40"
-            TextAlignment="Center" />
-        <WrapPanel
-            Margin="2,0,0,5">
-            <Image
-                Source=".\recursos\episodioIV.jpg"
-                Width="145"/>
-            <Image
-                Source=".\recursos\episodioIV.jpg"
-                Width="145"/>
-            <Image
-                Source=".\recursos\episodioIV.jpg"
-                Width="145"/>
-            <Image
-                Source=".\recursos\episodioIV.jpg"
-                Width="145"/>
-            <Image
-                Source=".\recursos\episodioIV.jpg"
-                Width="145"/>
-            <Image
-                Source=".\recursos\episodioIV.jpg"
-                Width="145"/>
-            <Image
-                Source=".\recursos\episodioIV.jpg"
-                Height="218"
-                Width="145"/>
-            <Image
-                Source=".\recursos\episodioIV.jpg"
-                Width="145"/>
+        <TextBlock DockPanel.Dock="Top"
+                   Text="Visor de imágenes"
+                   Style="{StaticResource textoEncabezado}"/>
+        <WrapPanel Margin="2,0,0,5">
+            <Image Source=".\recursos\episodioIV.jpg" />
+            <Image Source=".\recursos\episodioIV.jpg" />
+            <Image Source=".\recursos\episodioIV.jpg" />
+            <Image Source=".\recursos\episodioIV.jpg" />
+            <Image Source=".\recursos\episodioIV.jpg" />
+            <Image Source=".\recursos\episodioIV.jpg" />
+            <Image Source=".\recursos\episodioIV.jpg" />
+            <Image Source=".\recursos\episodioIV.jpg" />
         </WrapPanel>
     </DockPanel>
 </Window>
